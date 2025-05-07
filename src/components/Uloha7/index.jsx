@@ -1,4 +1,4 @@
-import './ukazatel-uspechu.css'
+import './ukazatel-uspechu.css';
 
 /*
 Zadání 1: Použij prop `barva` ve style atributu.
@@ -21,8 +21,8 @@ const UkazatelPokroku = ({ barva }) => {
       </div>
       <button>postoupit o 10 %</button>
     </div>
-  )
-}
+  );
+};
 
 export const Uloha7 = () => {
   return (
@@ -31,5 +31,5 @@ export const Uloha7 = () => {
       <UkazatelPokroku barva="green" />
       <UkazatelPokroku barva="purple" />
     </>
-  )
-}
+  );
+};

@@ -10,5 +10,5 @@ export const Uloha8 = () => {
       <h3>Prší v Brně: ano/ne/možná</h3>
       <button>změnit</button>
     </>
-  )
-}
+  );
+};

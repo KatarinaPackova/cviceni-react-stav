@@ -1,4 +1,4 @@
-import './ukol.css'
+import './ukol.css';
 
 /*
 Zadání 1: Pomocí `map` vypiš v seznamu `ul` všechny úkoly pomocí komponenty `Ukol`.
@@ -16,11 +16,11 @@ const Ukol = ({ nazev }) => {
       <span className="ukol__nazev">{nazev}</span>
       <button className="ukol__akce">splnit</button>
     </li>
-  )
-}
+  );
+};
 
 export const Uloha6 = () => {
-  const ukoly = ['Zamést', 'Pověsit prádlo', 'Umýt okna', 'Vynést koš']
+  const ukoly = ['Zamést', 'Pověsit prádlo', 'Umýt okna', 'Vynést koš'];
 
-  return <ul>{ukoly}</ul>
-}
+  return <ul>{ukoly}</ul>;
+};

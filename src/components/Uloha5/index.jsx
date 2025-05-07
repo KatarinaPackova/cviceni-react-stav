@@ -11,7 +11,7 @@ Zadání 4: Pokud je menu zavřené nechte mu jen třídu `hamburger`. Pro otev�
 
 export const Uloha5 = () => {
   return (
-    <div className='menu'>
+    <div className="menu">
       <button className="hamburger" aria-label="menu">
         <span></span>
         <span></span>
