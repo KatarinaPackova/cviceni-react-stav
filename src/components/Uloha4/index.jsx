@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './carousel.css';
 
 /*
@@ -21,20 +22,43 @@ Bonus: Pozor na krajní hodnoty. Pokud dojdete na konec nebo začátek pole, tak
   /assets/YmATDIFsCmQ.jpg
 */
 
+const obrazky = [
+  '/assets/WLUHO9A_xik.jpg',
+  '/assets/DA1eGglMmlg.jpg',
+  '/assets/kTxL6le0Wgk.jpg',
+  '/assets/7go5UASxmDY.jpg',
+  '/assets/YmATDIFsCmQ.jpg',
+];
+
 export const Uloha4 = () => {
+  const [aktivniObrazek, setAktivniObrazek] = useState(0);
+
+  const handleClickUp = () => {
+    setAktivniObrazek(aktivniObrazek + 1);
+  };
+  const handleClickDown = () => {
+    setAktivniObrazek(aktivniObrazek - 1);
+  };
+
   return (
     <div className="carousel">
-      <button className="carousel__predchozi" aria-label="předchozí">
+      <button
+        disabled={aktivniObrazek === 0}
+        onClick={handleClickDown}
+        className="carousel__predchozi"
+        aria-label="předchozí"
+      >
         ←
       </button>
       <div className="carousel__media">
-        <img
-          className="carousel__image"
-          src="https://source.unsplash.com/7go5UASxmDY/880x500"
-          alt=""
-        />
+        <img className="carousel__image" src={obrazky[aktivniObrazek]} alt="" />
       </div>
-      <button className="carousel__dalsi" aria-label="další">
+      <button
+        onClick={handleClickUp}
+        disabled={aktivniObrazek === obrazky.length - 1}
+        className="carousel__dalsi"
+        aria-label="další"
+      >
         →
       </button>
     </div>

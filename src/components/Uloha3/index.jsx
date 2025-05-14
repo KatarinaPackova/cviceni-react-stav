@@ -16,6 +16,33 @@ Zadání 3: Vypište v textu `<p>`, jaké číslo kostka ukazuje.
 Zadání 4: Vypište v atributu `alt` správné číslo.
 */
 
+// export const Uloha3 = () => {
+//const cisloNaKostce = 1; /* jedna až šest */
+
+//   const [cisloNaKostce, setCisloNaKostce] = useState(1);
+
+//   return (
+//     <>
+//       <img
+//         src={diceUrls[cisloNaKostce - 1]} /* indexy se číslují od nuly */
+//         width={60}
+//         height={60}
+//         alt={`Kostka s číslem ${cisloNaKostce}`}
+//         className="kostka__ikona"
+//       />
+//       <p className="kostka__text">Na kostce je číslo {cisloNaKostce}.</p>
+//       <button
+//         onClick={() =>
+//           setCisloNaKostce(cisloNaKostce === 6 ? 1 : cisloNaKostce + 1)
+//         }
+//         className="kostka__akce"
+//       >
+//         další
+//       </button>
+//     </>
+//   );
+// };
+
 export const Uloha3 = () => {
   const [cisloNaKostce, setCisloNaKostce] = useState(1); /* jedna až šest */
 
@@ -27,17 +54,14 @@ export const Uloha3 = () => {
   return (
     <>
       <img
-        src={diceUrls[cisloNaKostce - 1]} /* indexy se číslují od nuly */
+        src={diceUrls[cisloNaKostce - 1]} /* indexy se číslují od nuly  */
         width={60}
         height={60}
-        alt="Kostka s číslem @TODO"
+        alt={`Na kostce padlo: ${cisloNaKostce}`}
         className="kostka__ikona"
       />
       <p className="kostka__text">Na kostce je číslo {cisloNaKostce}.</p>
-      <button
-        className="kostka__akce"
-        onClick={() => setCisloNaKostce(cisloNaKostce + 1)}
-      >
+      <button className="kostka__akce" onClick={handleClick}>
         další
       </button>
     </>
